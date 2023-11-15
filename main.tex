@@ -90,8 +90,8 @@ Lời cuối, xin một lần nữa gửi lời cảm ơn sâu sắc đến cá 
 		      (Nồng độ $N_2O$ trong máu).(Thể tích máu)= $A(t_i)$.($F \Delta t$)
 	      \end{center}
 	      \begin{flushleft}
-		      Dựa theo quy tắc tính tổng Riemann, giả sử như $F$ không đổi thì ta có thể thấy được tổng thể tích khí $N_2O$ đi vào bên trong não bộ trong khoảng 10 phút đầu xấp xỉ là: 
-              $$\sum_{i = 1}^{n} A(t_i)F\Delta t = F \sum_{i = 1}^{n} A(t_i) \Delta t$$
+		      Dựa theo quy tắc tính tổng Riemann, giả sử như $F$ không đổi thì ta có thể thấy được tổng thể tích khí $N_2O$ đi vào bên trong não bộ trong khoảng 10 phút đầu xấp xỉ là:
+		      $$\sum_{i = 1}^{n} A(t_i)F\Delta t = F \sum_{i = 1}^{n} A(t_i) \Delta t$$
 		      Khi $n \to \infty$ thì ta sẽ có tổng lượng $N_2O$ được đưa vào não trong $10$ phút đầu tiên là:
 		      $$F \int_{0}^{10} A(t)dt$$
 		      Bên cạnh đó, tổng lượng $N_2O$ đi ra khỏi não cùng khoảng thời gian là:
@@ -104,161 +104,219 @@ Lời cuối, xin một lần nữa gửi lời cảm ơn sâu sắc đến cá 
 		      $$\displaystyle \int_{0}^{10}\left[A(t) - V(t)\right]dt = \sum_{i = 1}^{n} \left[A(t_i^*)-V(t_i^*)\right] \Delta t$$
 	      \end{flushleft}
 	\item \textbf{Ví dụ minh hoạ}
-          \begin{flushleft}
-            Lưu lượng máu trong não bộ của một người được thể hiện bằng lượng khí $N_2O$ được hấp thụ vào não $A(t)$ và lượng $N_2O$ đi ra khỏi não $V(t)$ trong khoảng thời gian 10 phút. 
-            Bảng dưới đây cho biết số liệu của lượng khí $N_2O$ trong từng khoảng thời gian:
-          \end{flushleft}
-          \begin{table}[H]
-            \centering
-            \def\arraystretch{1.2}
-            \begin{tabular}{|c|c|c|c|}
-                \hline
-                $t$ & $A(t)$ & $V(t)$ & $A(t) - V(t)$\\
-                \hline
-                1 & 0.025 & 0.006 & 0.019\\
-                \hline
-                3 & 0.045 & 0.028 & 0.017\\
-                \hline
-                5 & 0.048 & 0.039 & 0.009\\
-                \hline
-                7 & 0.049 & 0.044 & 0.005\\
-                \hline
-                9 & 0.050 & 0.046 & 0.004\\
-                \hline
-            \end{tabular}
-          \end{table}
-          \begin{itemize}
-            \item[-] Dùng quy tắc điểm giữa trong tổng Riemann để tính vùng in đậm nằm giữa $A(t)$ và $V(t)$ trong khoảng thời gian đã cho
-            \item[-] Giả sử tổng lượng $N_2O$ hấp thụ bởi não bộ là$ Q_B(10)=60ml$, hãy tính lưu lượng máu não
-          \end{itemize}
-          \centering\underline{Giải}
-          \begin{itemize}
-            \item[-] Bằng quy tắc điểm giữa trong tổng Riemann với $\Delta t=2s$, ta có:
-            $$\int_{0}^{10}\left[A(t)-V(t)\right]dt\approx 2\left[0.019+0.017+0.009+0.005+0.004\right]=0.108$$
-          \end{itemize}
-          \begin{flushleft}
-            Vậy vùng in đậm giữa $A(t)$ và $V(t)$ có giá trị xấp xỉ 0.108 $(mL/mL)$. phút
-          \end{flushleft}
-          \begin{itemize}
-            \item[-] Với $Q_B(10)=60mL$ thì lưu lượng máu não là:
-            $$F=\frac{Q(10)}{\displaystyle \int_{0}^{10}\left[A(t)-V(t)\right]dt} \approx \frac{60}{0.108} \approx 560mL/\text{phút}$$
-          \end{itemize}
+	      \begin{flushleft}
+		      Lưu lượng máu trong não bộ của một người được thể hiện bằng lượng khí $N_2O$ được hấp thụ vào não $A(t)$ và lượng $N_2O$ đi ra khỏi não $V(t)$ trong khoảng thời gian 10 phút.
+		      Bảng dưới đây cho biết số liệu của lượng khí $N_2O$ trong từng khoảng thời gian:
+	      \end{flushleft}
+	      \begin{table}[H]
+		      \centering
+		      \def\arraystretch{1.2}
+		      \begin{tabular}{|c|c|c|c|}
+			      \hline
+			      $t$ & $A(t)$ & $V(t)$ & $A(t) - V(t)$ \\
+			      \hline
+			      1   & 0.025  & 0.006  & 0.019         \\
+			      \hline
+			      3   & 0.045  & 0.028  & 0.017         \\
+			      \hline
+			      5   & 0.048  & 0.039  & 0.009         \\
+			      \hline
+			      7   & 0.049  & 0.044  & 0.005         \\
+			      \hline
+			      9   & 0.050  & 0.046  & 0.004         \\
+			      \hline
+		      \end{tabular}
+	      \end{table}
+	      \begin{itemize}
+		      \item[-] Dùng quy tắc điểm giữa trong tổng Riemann để tính vùng in đậm nằm giữa $A(t)$ và $V(t)$ trong khoảng thời gian đã cho
+		      \item[-] Giả sử tổng lượng $N_2O$ hấp thụ bởi não bộ là$ Q_B(10)=60ml$, hãy tính lưu lượng máu não
+	      \end{itemize}
+	      \centering\underline{Giải}
+	      \begin{itemize}
+		      \item[-] Bằng quy tắc điểm giữa trong tổng Riemann với $\Delta t=2s$, ta có:
+		            $$\int_{0}^{10}\left[A(t)-V(t)\right]dt\approx 2\left[0.019+0.017+0.009+0.005+0.004\right]=0.108$$
+	      \end{itemize}
+	      \begin{flushleft}
+		      Vậy vùng in đậm giữa $A(t)$ và $V(t)$ có giá trị xấp xỉ 0.108 $(mL/mL)$. phút
+	      \end{flushleft}
+	      \begin{itemize}
+		      \item[-] Với $Q_B(10)=60mL$ thì lưu lượng máu não là:
+		            $$F=\frac{Q(10)}{\displaystyle \int_{0}^{10}\left[A(t)-V(t)\right]dt} \approx \frac{60}{0.108} \approx 560mL/\text{phút}$$
+	      \end{itemize}
 \end{enumerate}
 
 \newpage
 \subsection{Survival and Renewal (Hàm sống sót và tái sinh)}
 \begin{enumerate}[a/]
-    \item \textbf{Định nghĩa}
-        \begin{itemize}
-            \item[-] Hàm sống sót (survival function) là một hàm thống kê được sử dụng để miêu tả xác suất một đối tượng nghiên cứu sống sót sau một khoảng thời gian nhất định.
-            \item[-] Hàm tái sinh (renewal function) là một hàm thống kê được sử dụng để mô tả số lần xảy ra của một sự kiện trong một khoảng thời gian nhất định, khi sự kiện được giả định là có tính ngẫu nhiên và không phụ thuộc vào nhau.
-        \end{itemize}
-    \item \textbf{Phương pháp tính: (Bài toán dân số)}
-        \begin{flushleft}
-            Giả sử số dân ban đầu là $P_0$, cứ sau $t$ năm sẽ có thêm một tỉ lệ $R(t)$ người dân được thêm vào, tỉ lệ số dân còn lại sau $t$ năm là $S(t)$. 
-            Số dân hiện tại (không tính số dân mới thêm vào) còn lại sau $T$ năm:
-            $$S(T).P_0$$
-            Để tính lượng dân số mới thêm vào sau $T$ năm, ta chia khoảng thời gian $\left[0,T\right]$ thành $n$ khoảng bằng nhau có độ dài:
-            $$\Delta t=T/n$$
-            Gọi $t_i$ là điểm cuối bên phải của khoảng thứ $I$, số dân được thêm vào tại thời điểm $t_i$ là:
-            $$R(t_i).\Delta t$$
-            Tỉ lệ những người dân được thêm vào trong khoảng thời gian $t_i$ sống sót sau $T$ năm là:
-            $$S(T-t_i)$$
-            Số dân được thêm vào trong khoảng thời gian $t_i$ sống sót sau $T$ năm là:
-            $$R(t_i).\Delta t.S(T-t_i)$$
-            Theo quy tắc tổng Riemann, số dân được thêm vào sống sót sau $T$ năm là:
-            $$\sum_{i=1}^{n}R(t_i).\ \Delta t.\ S(T-t_i)$$
-            Khi $n \to \infty$, ta có số dân được thêm vào sống sót sau $T$ năm là:
-            $$\int_{0}^{T}S(T-t)\ R(t)dt$$
-            Vậy tổng dân số sau $T$ năm là:
-            $$P(T)=S(T).P_0\ +\ \int_{0}^{T}S(T-t)\ R(t)dt\ (*)$$
-        \end{flushleft}
-    \newpage
-    \item \textbf{Ví dụ minh họa}
-        \begin{flushleft}
-            Hiện tại trong một tổ ong nọ có 35000 con ong và sinh sản với tốc độ 
-            $R(t)=1500.e^{0.96t}$ con ong/ngày. 
-            Nếu tỉ lệ số ong còn lại sau t ngày là $S(t) = e^{-0.5t}$. 
-            Hỏi số ong trong tổ sau 1 tuần là khoảng bao nhiêu?
-        \end{flushleft}
-        \begin{center}
-            Giải
-        \end{center}
-        \begin{flushleft}
-            Ta có: $P_0=35000$, $T=7$(ngày)\\
-            Theo công thức ta tính được số ong trong tổ sau 1 tuần là: %3.06kien
-            $$P(7)=S(7).35000 +\int_0^7S(7-t)R(t)dt$$
-                $$=35000e^{-0.5(7)}+ \int_0^7e^{-0.5(7-t)}1500.e^{0.96t}dt$$
-                $$=3500e^{-3.5}+1500e^{-3.5}\int_0^7e^{0.96t}dt$$
-                $$=3500e^{-3.5}+1500e^{-3.5}(\frac{e^{6.72}}{0.96}-\frac{e^0}{0.96})$$
-                $$\approx40116.16$$\\
-                Vậy ta dự đoán được sẽ có khoảng 40116 con ong trong tổ trong 1 tuần
-        \end{flushleft}  
-        \newpage
-    \subsection{Blood Flow (Lưu lượng máu chảy)}   
-    \begin{enumerate} [a/]
-        \item \textbf{Định nghĩa}
-        \begin{flushleft}
-        Blood Flow (BF) là quá trình chuyển động của dòng máu trong hệ tuần hoàn thông qua sự co bóp cơ tim để di chuyển máu chứa O2 và chất dinh dưỡng đến các mô trong cơ thể và mang máu đã khử O2 và CO2 về lại tim.          
-        \end{flushleft}
-        \item \textbf{Phương pháp tính }
-        \begin{flushleft}
-            Hình dạng mạch máu được mô tả bằng một ống hình trụ có chiều dài l và bán kính R như hình vẽ:\\
-            % insert hinh ve 2
-            Vận tốc của dòng máu tại vị trí cách trục trung tâm của ống là r: $$V=\frac{P}{4\eta l}(R^2-r^2)$$ \\
+	\item \textbf{Định nghĩa}
+	      \begin{itemize}
+		      \item[-] Hàm sống sót (survival function) là một hàm thống kê được sử dụng để miêu tả xác suất một đối tượng nghiên cứu sống sót sau một khoảng thời gian nhất định.
+		      \item[-] Hàm tái sinh (renewal function) là một hàm thống kê được sử dụng để mô tả số lần xảy ra của một sự kiện trong một khoảng thời gian nhất định, khi sự kiện được giả định là có tính ngẫu nhiên và không phụ thuộc vào nhau.
+	      \end{itemize}
+	\item \textbf{Phương pháp tính: (Bài toán dân số)}
+	      \begin{flushleft}
+		      Giả sử số dân ban đầu là $P_0$, cứ sau $t$ năm sẽ có thêm một tỉ lệ $R(t)$ người dân được thêm vào, tỉ lệ số dân còn lại sau $t$ năm là $S(t)$.
+		      Số dân hiện tại (không tính số dân mới thêm vào) còn lại sau $T$ năm:
+		      $$S(T).P_0$$
+		      Để tính lượng dân số mới thêm vào sau $T$ năm, ta chia khoảng thời gian $\left[0,T\right]$ thành $n$ khoảng bằng nhau có độ dài:
+		      $$\Delta t=\frac{T}{n}$$
+		      Gọi $t_i$ là điểm cuối bên phải của khoảng thứ $I$, số dân được thêm vào tại thời điểm $t_i$ là:
+		      $$R(t_i).\Delta t$$
+		      Tỉ lệ những người dân được thêm vào trong khoảng thời gian $t_i$ sống sót sau $T$ năm là:
+		      $$S(T-t_i)$$
+		      Số dân được thêm vào trong khoảng thời gian $t_i$ sống sót sau $T$ năm là:
+		      $$R(t_i).\Delta t.S(T-t_i)$$
+		      Theo quy tắc tổng Riemann, số dân được thêm vào sống sót sau $T$ năm là:
+		      $$\sum_{i=1}^{n}R(t_i).\ \Delta t.\ S(T-t_i)$$
+		      Khi $n \to \infty$, ta có số dân được thêm vào sống sót sau $T$ năm là:
+		      $$\int_{0}^{T}S(T-t)\ R(t)dt$$
+		      Vậy tổng dân số sau $T$ năm là:
+		      $$P(T)=S(T).P_0\ +\ \int_{0}^{T}S(T-t)\ R(t)dt\ (*)$$
+	      \end{flushleft}
+	      \newpage
+	\item \textbf{Ví dụ minh họa}
+	      \begin{flushleft}
+		      Hiện tại trong một tổ ong nọ có 35000 con ong và sinh sản với tốc độ
+		      $R(t)=1500.e^{0.96t}$ con ong/ngày.
+		      Nếu tỉ lệ số ong còn lại sau t ngày là $S(t) = e^{-0.5t}$.
+		      Hỏi số ong trong tổ sau 1 tuần là khoảng bao nhiêu?
+	      \end{flushleft}
+	      \begin{center}
+		      Giải
+	      \end{center}
+	      \begin{flushleft}
+		      Ta có: $P_0=35000$, $T=7$(ngày)\\
+		      Theo công thức ta tính được số ong trong tổ sau 1 tuần là: %3.06kien
+		      $$P(7)=S(7).35000 +\int_0^7S(7-t)R(t)dt$$
+		      $$=35000e^{-0.5(7)}+ \int_0^7e^{-0.5(7-t)}1500.e^{0.96t}dt$$
+		      $$=3500e^{-3.5}+1500e^{-3.5}\int_0^7e^{0.96t}dt$$
+		      $$=3500e^{-3.5}+1500e^{-3.5}(\frac{e^{6.72}}{0.96}-\frac{e^0}{0.96})$$
+		      $$\approx40116.16$$\\
+		      Vậy ta dự đoán được sẽ có khoảng 40116 con ong trong tổ trong 1 tuần
+	      \end{flushleft}
+\end{enumerate}
 
-            Trong đó : \begin{enumerate}
-                \item [+]  $\eta $ là độ nhớt của máu 
-                \item [+]  P là độ chênh lệch áp suất giữa 2 đầu ống 
-Nếu P và l không đổi thì v là hàm của r có miền [0;R]
-            \end{enumerate}
-            Chia bán kính R thành các bán kính nhỏ hơn có độ dài như nhau là $\Delta R$, diện tích gần đúngcủa vòng có bán kính trong $r_{i-1}$ và bán kính ngoài $r_i$ (như hình vẽ) là: $2\pi r_i \Delta r$ với $\Delta r= r_i-r_{i-1}$\\
-            Với $\Delta r$ rất bé thì vận tốc máu gần như không đổi gần bằng v(r).
-Thể tích máu chảy qua trong 1 đơn vị thời gian xấp xỉ là: 
-            $$(2\pi r, \Delta r)v(r_i)=2\pi r_iv(r_i)\Delta r$$
-            %insert figure 2!!
-            \\
-            Bằng quy tắc tổng Riemann, tổng thể tích máu chảy qua một mặt cắt của một mạch máu trong một đơn vị thời gian là:
-            $$\sum_{i=1}^n2\pi r_iv(r_i)\Delta r$$
-            \\
-            Khi $n \to \infty $ , tổng thể tích máu đi qua mặt cắt của một mạch máu trong một đơn vị thời gian (Kí hiệu: F) là: 
-            $$F=\int_0^R 2\pi rv(r)dr$$
-            $$=\int_0^R 2\pi r\frac{P}{4\eta l}(R^2-r^2)$$
-            $$=\frac{\pi P}{2\eta l}\int_0^R (R^2r -r^3)dr= \frac{\pi P}{2\eta l}[R^2\frac{r^2}{2}-\frac{r^4}{4}]|_{r=0}^{r=R}$$
-            $$=\frac{\pi P}{2\eta l}[\frac{R^4}{2}-\frac{R^2}{4}]=\frac{\pi PR^4}{8\eta l}$$
-            \\
-            Biểu thức trên được gọi là định luật Poiseuille’s Law
+\newpage
+\subsection{Blood Flow (Lưu lượng máu chảy)}
+\begin{enumerate} [a/]
+	\item \textbf{Định nghĩa}
+	      \begin{flushleft}
+		      Blood Flow (BF) là quá trình chuyển động của dòng máu trong hệ tuần hoàn thông qua sự co bóp cơ tim để di chuyển máu chứa O2 và chất dinh dưỡng đến các mô trong cơ thể và mang máu đã khử O2 và CO2 về lại tim.
+	      \end{flushleft}
+	\item \textbf{Phương pháp tính }
+	      \begin{flushleft}
+		      Hình dạng mạch máu được mô tả bằng một ống hình trụ có chiều dài l và bán kính R như hình vẽ:\\
+		      % insert hinh ve 2
+		      Vận tốc của dòng máu tại vị trí cách trục trung tâm của ống là r: $$V=\frac{P}{4\eta l}(R^2-r^2)$$ \\
 
-            \end{flushleft}
-            \item \textbf{Ví dụ minh họa}
-            \begin{flushleft}
-                Sử dụng Định luật Poiseuille’s Law để tính tốc độ dòng chảy trong động mạch nhỏ của con người, trong đó: 
-                \\
-                $\eta = 0,027 dyn/cm^2$
-                \\
-                $R= 0,008 cm$
-                \\
-                $l= 2 cm$
-                \\
-                $P= 4000 dyn/cm^2$
-            \end{flushleft}
-            \begin{center}
-                \textbf{\underline{Giải:}}
-            \end{center}
-            \begin{flushleft}
-                Ta có: 
-                $$F=\frac{\pi PR^4}{8\eta l}=\frac{\pi 4000.0,008^4}{8.0,027.2}=1,19.10^{-4} cm^3/S=1,19.10^{-4} ml/s$$
-                Áp dụng công thức:
-            \end{flushleft}
-                \begin{center}
-                    $v=\frac{F}{A}$ với ( F: lưu lượng máu ; A : Thiết diện mạch)
-                    $$=\frac{F}{\pi.R^2}=\frac{1,19.10^{-4}}{\pi . 0,008}=0.59 cm/s$$
-                \end{center}
-            \begin{flushleft}
-                Vậy tốc độ dòng chảy trong động mạch nhỏ của con người là khoảng 0.59 cm/s
-            \end{flushleft}    
+		      Trong đó : \begin{enumerate}
+			      \item [+]  $\eta $ là độ nhớt của máu
+			      \item [+]  P là độ chênh lệch áp suất giữa 2 đầu ống
+			            Nếu P và l không đổi thì v là hàm của r có miền [0;R]
+		      \end{enumerate}
+		      Chia bán kính R thành các bán kính nhỏ hơn có độ dài như nhau là $\Delta R$, diện tích gần đúngcủa vòng có bán kính trong $r_{i-1}$ và bán kính ngoài $r_i$ (như hình vẽ) là: $2\pi r_i \Delta r$ với $\Delta r= r_i-r_{i-1}$\\
+		      Với $\Delta r$ rất bé thì vận tốc máu gần như không đổi gần bằng v(r).
+		      Thể tích máu chảy qua trong 1 đơn vị thời gian xấp xỉ là:
+		      $$(2\pi r, \Delta r)v(r_i)=2\pi r_iv(r_i)\Delta r$$
+		      %insert figure 2!!
+		      \\
+		      Bằng quy tắc tổng Riemann, tổng thể tích máu chảy qua một mặt cắt của một mạch máu trong một đơn vị thời gian là:
+		      $$\sum_{i=1}^n2\pi r_iv(r_i)\Delta r$$
+		      \\
+		      Khi $n \to \infty $ , tổng thể tích máu đi qua mặt cắt của một mạch máu trong một đơn vị thời gian (Kí hiệu: F) là:
+		      $$F=\int_0^R 2\pi rv(r)dr$$
+		      $$=\int_0^R 2\pi r\frac{P}{4\eta l}(R^2-r^2)$$
+		      $$=\frac{\pi P}{2\eta l}\int_0^R (R^2r -r^3)dr= \frac{\pi P}{2\eta l}[R^2\frac{r^2}{2}-\frac{r^4}{4}]|_{r=0}^{r=R}$$
+		      $$=\frac{\pi P}{2\eta l}[\frac{R^4}{2}-\frac{R^2}{4}]=\frac{\pi PR^4}{8\eta l}$$
+		      \\
+		      Biểu thức trên được gọi là định luật Poiseuille’s Law
+	      \end{flushleft}
+	\item \textbf{Ví dụ minh họa}
+	      \begin{flushleft}
+		      Sử dụng Định luật Poiseuille’s Law để tính tốc độ dòng chảy trong động mạch nhỏ của con người, trong đó:
+		      \\
+		      $\eta = 0,027 dyn/cm^2$
+		      \\
+		      $R= 0,008 cm$
+		      \\
+		      $l= 2 cm$
+		      \\
+		      $P= 4000 dyn/cm^2$
+	      \end{flushleft}
+	      \begin{center}
+		      \textbf{\underline{Giải:}}
+	      \end{center}
+	      \begin{flushleft}
+		      Ta có:
+		      $$F=\frac{\pi PR^4}{8\eta l}=\frac{\pi 4000.0,008^4}{8.0,027.2}=1,19.10^{-4} cm^3/S=1,19.10^{-4} ml/s$$
+		      Áp dụng công thức:
+	      \end{flushleft}
+	      \begin{center}
+		      $v=\frac{F}{A}$ với ( F: lưu lượng máu ; A : Thiết diện mạch)
+		      $$=\frac{F}{\pi.R^2}=\frac{1,19.10^{-4}}{\pi . 0,008}=0.59 cm/s$$
+	      \end{center}
+	      \begin{flushleft}
+		      Vậy tốc độ dòng chảy trong động mạch nhỏ của con người là khoảng 0.59 $cm/s$
+	      \end{flushleft}
+\end{enumerate}
 
-        \end{enumerate}
+\newpage
+\subsection{Cardiac Output (Cung lượng tim)}
+\begin{enumerate}[a/]
+	\item \textbf{Định nghĩa}
+	      \begin{flushleft}
+		      Cardiac Output (Cung lượng tim) hay còn được gọi là
+		      tần số của dòng máu là lượng máu được tim bơm đi trong một đơn vị thời gian, thường là phút.
+	      \end{flushleft}
+        %   \vspace{2em}
+	\item \textbf{Phương pháp tính}
+	      \begin{flushleft}
+		      Để tính cung lượng tim, ta sẽ sử dụng phương pháp pha loãng thuốc nhuộm
+		      (dye dilution method) bằng cách đưa thuốc nhuộm vào tâm nhĩ phải và được
+		      chảy qua tim vào động mạch chủ và quan sát lượng thuốc nhuộm có trong
+		      tim trong khoảng thời gian $T$.\\
+		      \vspace{1em}
+		      Gọi $C(t)$ là nồng độ thuốc nhuộm tại thời điểm $t$, khi chia khoảng thời gian
+		      $\left[0,T\right]$ thành các khoảng thời gian nhỏ $\Delta t$ có độ dài bằng
+		      nhau thì lượng thuốc nhuộm chảy qua điểm đo trong khoảng thời gian phụ từ $t=t_{i-1}$ đến $t=t_i$, xấp xỉ:\\
+		      \begin{center}
+			      (Nồng độ thuốc nhuộm trong máu).(thể tích máu)$=c.(t_i).(F\Delta t)$
+		      \end{center}
+		      Với $F$ là cung lượng tim cần tìm, theo quy tắc tổng Riemann, tổng lượng thuốc nhuộm tại thời điểm $t_i$ là:
+		      $$\sum_{i=1}^{n}C(t_i)F\Delta t$$
+		      Cho $n \to \infty$, chúng ta có thể thấy lượng thuốc nhuộm là:
+		      $$A=\int_{0}^{T}c(t)Fdt=F\int_{0}^{T}c(t)dt$$
+		      Do đó cung lượng tim cần tìm là:
+		      $$F=\frac{A}{\displaystyle \int_{0}^{T}c(t)dt}$$
+	      \end{flushleft}
+          \newpage
+	\item \textbf{Ví dụ minh họa}
+	      \begin{flushleft}
+		      Tiêm một lượng thuốc nhuốc nhuộm $8mg$ vào tâm nhĩ phải. Nồng độ thuốc nhuộm ( tính bằng $mg/l$) được đo
+		      trong động mạch chủ trong khoảng thời gian 1 giây được thể hiện trong biểu đồ trên.
+		      Hãy tính cung lượng tim.
+		      \begin{table}[H]
+			      \centering
+			      \def\arraystretch{1.2}
+			      \begin{tabular}{|c|c|c|c|}
+				      \hline
+				      $t$ & $C(t)$ & $t$ & $C(t)$ \\
+				      \hline
+				      0   & 0      & 6   & 6.3    \\
+				      \hline
+				      1   & 0.6    & 7   & 4.8    \\
+				      \hline
+				      2   & 2.3    & 8   & 2.5    \\
+				      \hline
+				      3   & 5.9    & 9   & 1.6    \\
+				      \hline
+				      4   & 9.5    & 10  & 0      \\
+				      \hline
+				      5   & 8.2    &     &        \\
+				      \hline
+			      \end{tabular}
+		      \end{table}
+	      \end{flushleft}
 \end{enumerate}
 
 \newpage
