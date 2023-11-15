@@ -184,7 +184,7 @@ Lời cuối, xin một lần nữa gửi lời cảm ơn sâu sắc đến cá 
 		      Hỏi số ong trong tổ sau 1 tuần là khoảng bao nhiêu?
 	      \end{flushleft}
 	      \begin{center}
-		      Giải
+            \textbf{\underline{Giải}}
 	      \end{center}
 	      \begin{flushleft}
 		      Ta có: $P_0=35000$, $T=7$(ngày)\\
@@ -225,12 +225,14 @@ Lời cuối, xin một lần nữa gửi lời cảm ơn sâu sắc đến cá 
 		      Bằng quy tắc tổng Riemann, tổng thể tích máu chảy qua một mặt cắt của một mạch máu trong một đơn vị thời gian là:
 		      $$\sum_{i=1}^n2\pi r_iv(r_i)\Delta r$$
 		      \\
-		      Khi $n \to \infty $ , tổng thể tích máu đi qua mặt cắt của một mạch máu trong một đơn vị thời gian (Kí hiệu: F) là:
-		      $$F=\int_0^R 2\pi rv(r)dr$$
-		      $$=\int_0^R 2\pi r\frac{P}{4\eta l}(R^2-r^2)$$
-		      $$=\frac{\pi P}{2\eta l}\int_0^R (R^2r -r^3)dr= \frac{\pi P}{2\eta l}[R^2\frac{r^2}{2}-\frac{r^4}{4}]|_{r=0}^{r=R}$$
-		      $$=\frac{\pi P}{2\eta l}[\frac{R^4}{2}-\frac{R^2}{4}]=\frac{\pi PR^4}{8\eta l}$$
-		      \\
+		      Khi $n \to \infty $ , tổng thể tích máu đi qua mặt cắt của một mạch máu trong một đơn vị thời gian (Kí hiệu: $F$) là:
+              \begin{align*}
+                F&=\int_0^R 2\pi rv(r)dr\\
+                &=\int_0^R 2\pi r\frac{P}{4\eta l}(R^2-r^2)dr\\
+                &=\frac{\pi P}{2\eta l}\int_0^R (R^2r -r^3)dr\\
+                &=\frac{\pi P}{2\eta l}\left[R^2\frac{r^2}{2}-\frac{r^4}{4}\right]_{r=0}^{r=R}\\
+                &=\frac{\pi P}{2\eta l}\left[\frac{R^4}{2}-\frac{R^2}{4}\right]=\frac{\pi PR^4}{8\eta l}
+              \end{align*}
 		      Biểu thức trên được gọi là định luật Poiseuille’s Law
 	      \end{flushleft}
 	\item \textbf{Ví dụ minh họa}
@@ -291,7 +293,6 @@ Lời cuối, xin một lần nữa gửi lời cảm ơn sâu sắc đến cá 
 		      Do đó cung lượng tim cần tìm là:
 		      $$F=\frac{A}{\displaystyle \int_{0}^{T}c(t)dt}$$
 	      \end{flushleft}
-          \newpage
 	\item \textbf{Ví dụ minh họa}
 	      \begin{flushleft}
 		      Tiêm một lượng thuốc nhuốc nhuộm $8mg$ vào tâm nhĩ phải. Nồng độ thuốc nhuộm ( tính bằng $mg/l$) được đo
@@ -319,6 +320,22 @@ Lời cuối, xin một lần nữa gửi lời cảm ơn sâu sắc đến cá 
 			      \end{tabular}
 		      \end{table}
 	      \end{flushleft}
+          \newpage
+          \begin{center}
+            \textbf{\underline{Giải}}
+          \end{center}
+          \begin{flushleft}
+            Qua đề bài ta xác định được $A=8mg$, $T=10$\\
+            \vspace{1em}
+            Áp dụng quy tắc trung điểm ta có $n=5$ và $\Delta t=2$
+            \begin{align*}
+                \int_{0}^{10} C(t)dt &\approx \left[C(1)+C(3)+C(5)+C(7)+C(9)\right].\Delta t\\
+                &=\left[0.6+5.9+8.2+4.8+1.6\right].2\\
+                &=42.2
+            \end{align*}
+            Ta dùng công thức tính cung lượng tim
+            $$F=\frac{A}{\displaystyle \int_{0}^{10} C(t)dt} \approx \frac{8}{42.2} \approx 0.19L/s=11.4L/min$$
+          \end{flushleft}
 \end{enumerate}
 
 \newpage
