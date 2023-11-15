@@ -4,31 +4,33 @@
 \usepackage[margin=1in]{geometry}
 % \usepackage{fixltx2e} %Provide \textsubscript
 \usepackage{amsmath, amssymb, amsfonts}
+\usepackage{color}
+\usepackage{hyperref}
 % \usepackage{mathptmx} %Use Times New Roman fonts but not works perfectly
 %\usepackage{pgfplots}
 \usepackage{indentfirst}
 
 \begin{document}
 \begin{center}
-    \textbf{Đề tài}
+	\textbf{Đề tài}
 \end{center}
 
 Tham khảo Jame Stewart, Troy Day, Biocalcuclus-Calculus for life sience.
-    \begin{enumerate} [1.]
-            \item Tìm hiểu về \textbf{Cerebral blood flow} trong ví dụ 4, phần 6.1.
-            \item Tiềm hiểu về \textbf{Survival an Renewal; Cardiac output; Blood flow} phần 6.3.
-    \end{enumerate}
+\begin{enumerate} [1.]
+	\item Tìm hiểu về \textbf{Cerebral blood flow} trong ví dụ 4, phần 6.1.
+	\item Tiềm hiểu về \textbf{Survival an Renewal; Cardiac output; Blood flow} phần 6.3.
+\end{enumerate}
 
-    
+
 \textbf{Yêu cầu:} Hiểu được các thuật ngữ và cách tính. Nêu ví dụ cho mỗi phần, không dùng lại ví dụ của sách.
 \newpage
 \begin{center}
-    \textbf{Lời nói đầu}
+	\textbf{Lời nói đầu}
 \end{center}
 
-    Giải tích 1 là một môn đại cương quan trọng đối với các sinh viên ngành Kỹ thuật – Công nghẹ nói chung và sinh viên trường Đại học Bách Khoa nói riêng. Vì thế, việc dành ra một khoảng thời gian lớn để học hỏi lý thuyết và nghiên cứu môn học này là một điều tất yếu, để các sinh viên có một nền móng vũng chắc trong các môn KHTN, tạo tiền đề cho sinh viên học tốt các môn chuyên ngành sau này.\newline
+Giải tích 1 là một môn đại cương quan trọng đối với các sinh viên ngành Kỹ thuật – Công nghẹ nói chung và sinh viên trường Đại học Bách Khoa nói riêng. Vì thế, việc dành ra một khoảng thời gian lớn để học hỏi lý thuyết và nghiên cứu môn học này là một điều tất yếu, để các sinh viên có một nền móng vũng chắc trong các môn KHTN, tạo tiền đề cho sinh viên học tốt các môn chuyên ngành sau này.\newline
 
-    
+
 Ở Bài tập lớn này nhóm chúng em đã hiểu được các thuật ngữ và cách tính của:\\
 + Lưu lượng máu não\\
 + Sự tồn tại và thay mới\\
@@ -40,112 +42,116 @@ Tham khảo Jame Stewart, Troy Day, Biocalcuclus-Calculus for life sience.
 
 \newpage
 \begin{center}
-    \textbf{Lời cám ơn}
+	\textbf{Lời cám ơn}
 \end{center}
 
-Trong suốt quá trình thực hiện bài tập lớn, nhóm chúng tôi đã nhận được rất nhiều sự quan tâm và ủng hộ, giúp đỡ tận tình của thầy cô, anh chị em và bạn bè. 
+Trong suốt quá trình thực hiện bài tập lớn, nhóm chúng tôi đã nhận được rất nhiều sự quan tâm và ủng hộ, giúp đỡ tận tình của thầy cô, anh chị em và bạn bè.
 
 
-Ngoài ra, nhóm cũng xin gửi lời tri ân chân thành nhất đến thầy Võ Trần An và cô Trần Thị Ngọc Huyền, là những giảng viên hướng dẫn cho đề tài  này. Nhờ có thầy cô hết lòng chỉ bảo mà nhóm đã hoàn thành bài tập lớn đúng tiến độ và giải quyết tốt những vướng mắc gặp phải. Sự hướng dẫn của thầy cô đã là kim chỉ nam cho mọi hành động của nhóm và phát huy tối đa được mối quan hệ hỗ trợ giữa thầy  và trò trong môi trường giáo dục. 
+Ngoài ra, nhóm cũng xin gửi lời tri ân chân thành nhất đến thầy Võ Trần An và cô Trần Thị Ngọc Huyền, là những giảng viên hướng dẫn cho đề tài  này. Nhờ có thầy cô hết lòng chỉ bảo mà nhóm đã hoàn thành bài tập lớn đúng tiến độ và giải quyết tốt những vướng mắc gặp phải. Sự hướng dẫn của thầy cô đã là kim chỉ nam cho mọi hành động của nhóm và phát huy tối đa được mối quan hệ hỗ trợ giữa thầy  và trò trong môi trường giáo dục.
 
- 
- Lời cuối, xin một lần nữa gửi lời cảm ơn sâu sắc đến cá nhân, các thầy cô đã dành thời gian chỉ dẫn cho nhóm. Đây chính là niềm tin và là nguồn động lực to lớn để nhóm có thể đạt được thành quả này.
- \newpage
- 
- \chapter{CHƯƠNG 1: MỞ ĐẦU}
 
- \newpage
+Lời cuối, xin một lần nữa gửi lời cảm ơn sâu sắc đến cá nhân, các thầy cô đã dành thời gian chỉ dẫn cho nhóm. Đây chính là niềm tin và là nguồn động lực to lớn để nhóm có thể đạt được thành quả này.
 
- \chapter{CHƯƠNG 2: CƠ SỞ LÝ THUYẾT}
-    \begin{enumerate} [2.1/]
-        \item \textbf{Cerebral Blood Flow (Lưu lượng máu não)}
-     \end{enumerate}
-  \begin{enumerate}[a/]
-  \item \textbf{Định nghĩa}
- 
- \begin{flushleft}
-CBF được định nghĩa là thể tích máu chảy trên một đơn vị khối lượng trong
-một đơn vị thời gian trong mô não và thường được biểu thị bằng đơn vị $ml$\ máu/($100g$\textsubscript{mô}.phút). 
-Ngoài ra, người ta có thể biểu thị CBF dưới dạng lưu lượng trên một đơn vị thể tích mô não, 
-do đó tính bằng $ml$\ máu/($100ml$\textsubscript{mô}.phút).
-\end{flushleft}
-\item \textbf{Phương pháp đo lường}
-    \begin{flushleft}
+\newpage
+\tableofcontents
 
-				Phương pháp đo lưu lượng máu não trong đó bệnh nhân được 
-				hít một hỗn hợp khí bao gồm chất đánh dấu có chứa $15\%\ N_2O$ \\
-        \begin{itemize}
-        \item[-] 	Gọi A(t) là nồng độ N2O trong động mạch được đo khi máu đi vào não và V(t) là nồng độ N2O trong tĩnh mạch trong máu chảy ra từ não trong tĩnh mạch cổ\\
-        \item[-] 	Biểu đồ thể hiện tương quan giữa A(t) và V(t) như sau: \\
-    \end{itemize}
-    Kí hiệu lưu lượng máu là $F$ (đơn vị $mL$/phút). Xét trong 10 phút đầu tiên
-						kể từ khi hít, nếu chia khoảng $\left[0,10\right]$ thành các khoảng nhỏ hơn có độ dài bằng nhau $\Delta t$ thì 
-						thể tích $N_2O$ chảy qua một điểm trong động mạch trong khoảng thời gian từ $t_{i-1} \to t_i$ xấp xỉ bằng: \\
-      	\end{flushleft}
-      \begin{center}
-          (Nồng độ $N_2O$ trong máu).(Thể tích máu)= A($t_i$).(F$\Delta$t)
-      \end{center}
-      \begin{flushleft}
-          Dựa theo quy tắc tính tổng Riemann, giả sử như F không đổi thì ta có thể thấy được tổng thể tích khí N2O đi vào bên trong não bộ trong khoảng 10 phút đầu xấp xỉ là: $$\sum_{i = 1}^{n} A(t_i)F\Delta t = F \sum_{i = 1}^{n} A(t_i) \Delta t$$
-          Khi $n \to \infty$ thì ta sẽ có tổng lượng $N_2O$ được đưa vào não trong $10$ phút đầu tiên là:
-						$$F \int_{0}^{10} A(t)dt$$
-      Bên cạnh đó, tổng lượng $N_2O$ đi ra khỏi não cùng khoảng thời gian là:
-						$$F \int_{0}^{10} V(t)dt$$
-      Theo đó, tổng lượng $N_2O$ thực tế đi vào trong não $10$ phút đầu tiên trong quá trình (Kí hiệu là $Q_B(10)$):
-						$$Q_B(10)=F\int_{0}^{10}\left[A(t)-V(t)\right]dt$$
-						Từ đó ta có:
-						$$F=\frac{Q_B(10)}{\displaystyle \int_{0}^{10}\left[A(t) - V(t)\right]dt}$$
-						Trong đó $\displaystyle \int_{0}^{10}\left[A(t) - V(t)\right]dt$ có thể được tính bằng quy tắc điểm giữa trong tổng Riemann, theo đó:
-						$$\displaystyle \int_{0}^{10}\left[A(t) - V(t)\right]dt = \sum_{i = 1}^{n} \left[A(t_i^*)-V(t_i^*)\right] \Delta t$$
-      \end{flushleft}
-            \item \textbf{Ví dụ minh hoạ}
-      \end{enumerate}
-%\tableofcontents
+\newpage
+\addcontentsline{toc}{section}{CHƯƠNG 1: MỞ ĐẦU}
+\section*{CHƯƠNG 1: MỞ ĐẦU}
+
+\newpage
+\addcontentsline{toc}{section}{CHƯƠNG 2: CƠ SỞ LÝ THUYẾT}
+\section*{CHƯƠNG 2: CƠ SỞ LÝ THUYẾT}
+\begin{enumerate} [2.1/]
+	\item \textbf{Cerebral Blood Flow (Lưu lượng máu não)}
+\end{enumerate}
+\begin{enumerate}[a/]
+	\item \textbf{Định nghĩa}
+
+	      \begin{flushleft}
+		      CBF được định nghĩa là thể tích máu chảy trên một đơn vị khối lượng trong
+		      một đơn vị thời gian trong mô não và thường được biểu thị bằng đơn vị $ml$\ máu/($100g$\textsubscript{mô}.phút).
+		      Ngoài ra, người ta có thể biểu thị CBF dưới dạng lưu lượng trên một đơn vị thể tích mô não,
+		      do đó tính bằng $ml$\ máu/($100ml$\textsubscript{mô}.phút).
+	      \end{flushleft}
+	\item \textbf{Phương pháp đo lường}
+	      \begin{flushleft}
+
+		      Phương pháp đo lưu lượng máu não trong đó bệnh nhân được
+		      hít một hỗn hợp khí bao gồm chất đánh dấu có chứa $15\%\ N_2O$ \\
+		      \begin{itemize}
+			      \item[-] 	Gọi A(t) là nồng độ N2O trong động mạch được đo khi máu đi vào não và V(t) là nồng độ N2O trong tĩnh mạch trong máu chảy ra từ não trong tĩnh mạch cổ\\
+			      \item[-] 	Biểu đồ thể hiện tương quan giữa A(t) và V(t) như sau: \\
+		      \end{itemize}
+		      Kí hiệu lưu lượng máu là $F$ (đơn vị $mL$/phút). Xét trong 10 phút đầu tiên
+		      kể từ khi hít, nếu chia khoảng $\left[0,10\right]$ thành các khoảng nhỏ hơn có độ dài bằng nhau $\Delta t$ thì
+		      thể tích $N_2O$ chảy qua một điểm trong động mạch trong khoảng thời gian từ $t_{i-1} \to t_i$ xấp xỉ bằng: \\
+	      \end{flushleft}
+	      \begin{center}
+		      (Nồng độ $N_2O$ trong máu).(Thể tích máu)= A($t_i$).(F$\Delta$t)
+	      \end{center}
+	      \begin{flushleft}
+		      Dựa theo quy tắc tính tổng Riemann, giả sử như F không đổi thì ta có thể thấy được tổng thể tích khí N2O đi vào bên trong não bộ trong khoảng 10 phút đầu xấp xỉ là: $$\sum_{i = 1}^{n} A(t_i)F\Delta t = F \sum_{i = 1}^{n} A(t_i) \Delta t$$
+		      Khi $n \to \infty$ thì ta sẽ có tổng lượng $N_2O$ được đưa vào não trong $10$ phút đầu tiên là:
+		      $$F \int_{0}^{10} A(t)dt$$
+		      Bên cạnh đó, tổng lượng $N_2O$ đi ra khỏi não cùng khoảng thời gian là:
+		      $$F \int_{0}^{10} V(t)dt$$
+		      Theo đó, tổng lượng $N_2O$ thực tế đi vào trong não $10$ phút đầu tiên trong quá trình (Kí hiệu là $Q_B(10)$):
+		      $$Q_B(10)=F\int_{0}^{10}\left[A(t)-V(t)\right]dt$$
+		      Từ đó ta có:
+		      $$F=\frac{Q_B(10)}{\displaystyle \int_{0}^{10}\left[A(t) - V(t)\right]dt}$$
+		      Trong đó $\displaystyle \int_{0}^{10}\left[A(t) - V(t)\right]dt$ có thể được tính bằng quy tắc điểm giữa trong tổng Riemann, theo đó:
+		      $$\displaystyle \int_{0}^{10}\left[A(t) - V(t)\right]dt = \sum_{i = 1}^{n} \left[A(t_i^*)-V(t_i^*)\right] \Delta t$$
+	      \end{flushleft}
+	\item \textbf{Ví dụ minh hoạ}
+\end{enumerate}
+
 \newpage
 \addcontentsline{toc}{section}{CHƯƠNG 3: KẾT LUẬN}
 \section*{CHƯƠNG 3: KẾT LUẬN}
 \begin{itemize}
-    \item[*] \textbf{Ưu điểm:}
-    \begin{itemize}
-        \item[-] Hiểu thêm về ứng dụng của toán học trong những lĩnh vực ngoài đời sống.
-        \item[-] Giúp hiểu thêm về cách sử dụng phần mềm lập trình Latex.
-    \end{itemize}
-    \item[*] \textbf{Nhược điểm:}
-    \begin{itemize}
-        \item[-] Thiết kế đoạn code tốn nhiều thời gian, công sức.
-    \end{itemize}
+	\item[*] \textbf{Ưu điểm:}
+	      \begin{itemize}
+		      \item[-] Hiểu thêm về ứng dụng của toán học trong những lĩnh vực ngoài đời sống.
+		      \item[-] Giúp hiểu thêm về cách sử dụng phần mềm lập trình Latex.
+	      \end{itemize}
+	\item[*] \textbf{Nhược điểm:}
+	      \begin{itemize}
+		      \item[-] Thiết kế đoạn code tốn nhiều thời gian, công sức.
+	      \end{itemize}
 \end{itemize}
 
 \vspace{2em}
-Với sự phân công chuẩn bị kỹ lưỡng và cố gắng hết mình, \textbf{nhóm 9} đã hoàn thành đề tài được giao và cho ra kết quả như mong muốn. 
+Với sự phân công chuẩn bị kỹ lưỡng và cố gắng hết mình, \textbf{nhóm 9} đã hoàn thành đề tài được giao và cho ra kết quả như mong muốn.
 
 \vspace{2em}
 \textbf{Qua phần bài tập lớn này nhóm đã:}
 \begin{itemize}
-    \item[-] Biết được một số thao tác lập trình trên Latex.
-    \item[-] Nâng cao sự hứng thú đối với môn học.
-    \item[-] Trao dồi kỹ năng học tập và làm việc nhóm.
-    \item[-] Nâng cao tinh thần trách nhiệm và thắt chặt tình đoàn kết của các thành viên trong nhóm.
+	\item[-] Biết được một số thao tác lập trình trên Latex.
+	\item[-] Nâng cao sự hứng thú đối với môn học.
+	\item[-] Trao dồi kỹ năng học tập và làm việc nhóm.
+	\item[-] Nâng cao tinh thần trách nhiệm và thắt chặt tình đoàn kết của các thành viên trong nhóm.
 \end{itemize}
 
 \newpage
 \addcontentsline{toc}{section}{DANH MỤC TÀI LIỆU THAM KHẢO}
 \section*{\small\textbf{DANH MỤC TÀI LIỆU THAM KHẢO}}
 \begin{small}
-    \begin{enumerate}
-        \item J. Stewart and T. Day, Biocalculus: Calculus for Life Sciences. Boston, MA: Cengage Learning, 2015
-        \item[] \textcolor{cyan}{\url{https://uotechnology.edu.iq/dep/bme/english/Pages/Lectures/mathmatix/2stage/BIOCALCULUS\%20CALCULUS\%20FOR\%20LIFE\%20SCIENCES\%201ST\%20EDITION\%20C2015.pdf}}
-        \item Arthur W. Toga: Brain Mapping - An Encyclopedic Reference, 2015
-        \item[] \textcolor{cyan}{\url{https://www.sciencedirect.com/referencework/9780123973160/brain-mapping}}
-        \item B. A. Sevast'yanov: Renewal Theory - Journal of Mathematical Sciences, 1975
-        \item[] \textcolor{cyan}{\url{https://link.springer.com/article/10.1007/BF01097185}}
-        \item David G. Kleinbaum and Mitchel Klein: Survival Analysis: A Self- learning Text, Third Edition
-        \item[] \textcolor{cyan}{\url{https://link.springer.com/book/10.1007/978-1-4419-6646-9}}
-        \item Jordan King; David R. Lowery: Physiology, Cardiac Output
-        \item[] \textcolor{cyan}{\url{https://www.ncbi.nlm.nih.gov/books/NBK470455}}
-        \item BS. ĐẶNG HUỲNH ANH THƯ: Sinh lý hệ mạch
-        \item[] \textcolor{cyan}{\url{https://admin.ump.edu.vn/uploads/ckeditor/files/CKI\_Timm\%e1\%ba\%a1ch\%20SL\%20h\%e1\%bb\%87\%20m\%e1\%ba\%a1ch.pdf}}
-        
-    \end{enumerate}
+	\begin{enumerate}
+		\item J. Stewart and T. Day, Biocalculus: Calculus for Life Sciences. Boston, MA: Cengage Learning, 2015
+		\item[] \textcolor{cyan}{\url{https://uotechnology.edu.iq/dep/bme/english/Pages/Lectures/mathmatix/2stage/BIOCALCULUS\%20CALCULUS\%20FOR\%20LIFE\%20SCIENCES\%201ST\%20EDITION\%20C2015.pdf}}
+		\item Arthur W. Toga: Brain Mapping - An Encyclopedic Reference, 2015
+		\item[] \textcolor{cyan}{\url{https://www.sciencedirect.com/referencework/9780123973160/brain-mapping}}
+		\item B. A. Sevast'yanov: Renewal Theory - Journal of Mathematical Sciences, 1975
+		\item[] \textcolor{cyan}{\url{https://link.springer.com/article/10.1007/BF01097185}}
+		\item David G. Kleinbaum and Mitchel Klein: Survival Analysis: A Self- learning Text, Third Edition
+		\item[] \textcolor{cyan}{\url{https://link.springer.com/book/10.1007/978-1-4419-6646-9}}
+		\item Jordan King; David R. Lowery: Physiology, Cardiac Output
+		\item[] \textcolor{cyan}{\url{https://www.ncbi.nlm.nih.gov/books/NBK470455}}
+		\item BS. ĐẶNG HUỲNH ANH THƯ: Sinh lý hệ mạch
+		\item[] \textcolor{cyan}{\url{https://admin.ump.edu.vn/uploads/ckeditor/files/CKI\_Timm\%e1\%ba\%a1ch\%20SL\%20h\%e1\%bb\%87\%20m\%e1\%ba\%a1ch.pdf}}
+
+	\end{enumerate}
 \end{small}
 \end{document}
