@@ -148,12 +148,47 @@ Lời cuối, xin một lần nữa gửi lời cảm ơn sâu sắc đến cá 
 \newpage
 \subsection{Survival and Renewal (Hàm sống sót và tái sinh)}
 \begin{enumerate}[a/]
-    \item Định nghĩa
+    \item \textbf{Định nghĩa}
         \begin{itemize}
             \item[-] Hàm sống sót (survival function) là một hàm thống kê được sử dụng để miêu tả xác suất một đối tượng nghiên cứu sống sót sau một khoảng thời gian nhất định.
             \item[-] Hàm tái sinh (renewal function) là một hàm thống kê được sử dụng để mô tả số lần xảy ra của một sự kiện trong một khoảng thời gian nhất định, khi sự kiện được giả định là có tính ngẫu nhiên và không phụ thuộc vào nhau.
         \end{itemize}
-    \item Phương pháp tính: (Bài toán dân số)
+    \item \textbf{Phương pháp tính: (Bài toán dân số)}
+        \begin{flushleft}
+            Giả sử số dân ban đầu là $P_0$, cứ sau $t$ năm sẽ có thêm một tỉ lệ $R(t)$ người dân được thêm vào, tỉ lệ số dân còn lại sau $t$ năm là $S(t)$. 
+            Số dân hiện tại (không tính số dân mới thêm vào) còn lại sau $T$ năm:
+            $$S(T).P_0$$
+            Để tính lượng dân số mới thêm vào sau $T$ năm, ta chia khoảng thời gian $\left[0,T\right]$ thành $n$ khoảng bằng nhau có độ dài:
+            $$\Delta t=T/n$$
+            Gọi $t_i$ là điểm cuối bên phải của khoảng thứ $I$, số dân được thêm vào tại thời điểm $t_i$ là:
+            $$R(t_i).\Delta t$$
+            Tỉ lệ những người dân được thêm vào trong khoảng thời gian $t_i$ sống sót sau $T$ năm là:
+            $$S(T-t_i)$$
+            Số dân được thêm vào trong khoảng thời gian $t_i$ sống sót sau $T$ năm là:
+            $$R(t_i).\Delta t.S(T-t_i)$$
+            Theo quy tắc tổng Riemann, số dân được thêm vào sống sót sau $T$ năm là:
+            $$\sum_{i=1}^{n}R(t_i).\ \Delta t.\ S(T-t_i)$$
+            Khi $n \to \infty$, ta có số dân được thêm vào sống sót sau $T$ năm là:
+            $$\int_{0}^{T}S(T-t)\ R(t)dt$$
+            Vậy tổng dân số sau $T$ năm là:
+            $$P(T)=S(T).P_0\ +\ \int_{0}^{T}S(T-t)\ R(t)dt\ (*)$$
+        \end{flushleft}
+    \newpage
+    \item \textbf{Ví dụ minh họa}
+        \begin{flushleft}
+            Hiện tại trong một tổ ong nọ có 35000 con ong và sinh sản với tốc độ 
+            $R(t)=1500.e^{0.96t}$ con ong/ngày. 
+            Nếu tỉ lệ số ong còn lại sau t ngày là $S(t) = e^{-0.5t}$. 
+            Hỏi số ong trong tổ sau 1 tuần là khoảng bao nhiêu?
+        \end{flushleft}
+        \begin{center}
+            Giải
+        \end{center}
+        \begin{flushleft}
+            Ta có: $P_0=35000$, $T=7$(ngày)\\
+            Theo công thức ta tính được số ong trong tổ sau 1 tuần là:
+            
+        \end{flushleft}
 \end{enumerate}
 
 \newpage
