@@ -186,9 +186,79 @@ Lời cuối, xin một lần nữa gửi lời cảm ơn sâu sắc đến cá 
         \end{center}
         \begin{flushleft}
             Ta có: $P_0=35000$, $T=7$(ngày)\\
-            Theo công thức ta tính được số ong trong tổ sau 1 tuần là:
-            
+            Theo công thức ta tính được số ong trong tổ sau 1 tuần là: %3.06kien
+            $$P(7)=S(7).35000 +\int_0^7S(7-t)R(t)dt$$
+                $$=35000e^{-0.5(7)}+ \int_0^7e^{-0.5(7-t)}1500.e^{0.96t}dt$$
+                $$=3500e^{-3.5}+1500e^{-3.5}\int_0^7e^{0.96t}dt$$
+                $$=3500e^{-3.5}+1500e^{-3.5}(\frac{e^{6.72}}{0.96}-\frac{e^0}{0.96})$$
+                $$\approx40116.16$$\\
+                Vậy ta dự đoán được sẽ có khoảng 40116 con ong trong tổ trong 1 tuần
+        \end{flushleft}  
+        \newpage
+    \subsection{Blood Flow (Lưu lượng máu chảy)}   
+    \begin{enumerate} [a/]
+        \item \textbf{Định nghĩa}
+        \begin{flushleft}
+        Blood Flow (BF) là quá trình chuyển động của dòng máu trong hệ tuần hoàn thông qua sự co bóp cơ tim để di chuyển máu chứa O2 và chất dinh dưỡng đến các mô trong cơ thể và mang máu đã khử O2 và CO2 về lại tim.          
         \end{flushleft}
+        \item \textbf{Phương pháp tính }
+        \begin{flushleft}
+            Hình dạng mạch máu được mô tả bằng một ống hình trụ có chiều dài l và bán kính R như hình vẽ:\\
+            % insert hinh ve 2
+            Vận tốc của dòng máu tại vị trí cách trục trung tâm của ống là r: $$V=\frac{P}{4\eta l}(R^2-r^2)$$ \\
+
+            Trong đó : \begin{enumerate}
+                \item [+]  $\eta $ là độ nhớt của máu 
+                \item [+]  P là độ chênh lệch áp suất giữa 2 đầu ống 
+Nếu P và l không đổi thì v là hàm của r có miền [0;R]
+            \end{enumerate}
+            Chia bán kính R thành các bán kính nhỏ hơn có độ dài như nhau là $\Delta R$, diện tích gần đúngcủa vòng có bán kính trong $r_{i-1}$ và bán kính ngoài $r_i$ (như hình vẽ) là: $2\pi r_i \Delta r$ với $\Delta r= r_i-r_{i-1}$\\
+            Với $\Delta r$ rất bé thì vận tốc máu gần như không đổi gần bằng v(r).
+Thể tích máu chảy qua trong 1 đơn vị thời gian xấp xỉ là: 
+            $$(2\pi r, \Delta r)v(r_i)=2\pi r_iv(r_i)\Delta r$$
+            %insert figure 2!!
+            \\
+            Bằng quy tắc tổng Riemann, tổng thể tích máu chảy qua một mặt cắt của một mạch máu trong một đơn vị thời gian là:
+            $$\sum_{i=1}^n2\pi r_iv(r_i)\Delta r$$
+            \\
+            Khi $n \to \infty $ , tổng thể tích máu đi qua mặt cắt của một mạch máu trong một đơn vị thời gian (Kí hiệu: F) là: 
+            $$F=\int_0^R 2\pi rv(r)dr$$
+            $$=\int_0^R 2\pi r\frac{P}{4\eta l}(R^2-r^2)$$
+            $$=\frac{\pi P}{2\eta l}\int_0^R (R^2r -r^3)dr= \frac{\pi P}{2\eta l}[R^2\frac{r^2}{2}-\frac{r^4}{4}]|_{r=0}^{r=R}$$
+            $$=\frac{\pi P}{2\eta l}[\frac{R^4}{2}-\frac{R^2}{4}]=\frac{\pi PR^4}{8\eta l}$$
+            \\
+            Biểu thức trên được gọi là định luật Poiseuille’s Law
+
+            \end{flushleft}
+            \item \textbf{Ví dụ minh họa}
+            \begin{flushleft}
+                Sử dụng Định luật Poiseuille’s Law để tính tốc độ dòng chảy trong động mạch nhỏ của con người, trong đó: 
+                \\
+                $\eta = 0,027 dyn/cm^2$
+                \\
+                $R= 0,008 cm$
+                \\
+                $l= 2 cm$
+                \\
+                $P= 4000 dyn/cm^2$
+            \end{flushleft}
+            \begin{center}
+                \textbf{\underline{Giải:}}
+            \end{center}
+            \begin{flushleft}
+                Ta có: 
+                $$F=\frac{\pi PR^4}{8\eta l}=\frac{\pi 4000.0,008^4}{8.0,027.2}=1,19.10^{-4} cm^3/S=1,19.10^{-4} ml/s$$
+                Áp dụng công thức:
+            \end{flushleft}
+                \begin{center}
+                    $v=\frac{F}{A}$ với ( F: lưu lượng máu ; A : Thiết diện mạch)
+                    $$=\frac{F}{\pi.R^2}=\frac{1,19.10^{-4}}{\pi . 0,008}=0.59 cm/s$$
+                \end{center}
+            \begin{flushleft}
+                Vậy tốc độ dòng chảy trong động mạch nhỏ của con người là khoảng 0.59 cm/s
+            \end{flushleft}    
+
+        \end{enumerate}
 \end{enumerate}
 
 \newpage
