@@ -6,6 +6,7 @@
 \usepackage{amsmath, amssymb, amsfonts}
 \usepackage{color}
 \usepackage{hyperref}
+\usepackage{float}
 % \usepackage{mathptmx} %Use Times New Roman fonts but not works perfectly
 %\usepackage{pgfplots}
 \usepackage{indentfirst}
@@ -107,7 +108,29 @@ Lời cuối, xin một lần nữa gửi lời cảm ơn sâu sắc đến cá 
             Lưu lượng máu trong não bộ của một người được thể hiện bằng lượng khí $N_2O$ được hấp thụ vào não $A(t)$ và lượng $N_2O$ đi ra khỏi não $V(t)$ trong khoảng thời gian 10 phút. 
             Bảng dưới đây cho biết số liệu của lượng khí $N_2O$ trong từng khoảng thời gian:
           \end{flushleft}
-          
+          \begin{table}[H]
+            \centering
+            \def\arraystretch{1.2}
+            \begin{tabular}{|c|c|c|c|}
+                \hline
+                $t$ & $A(t)$ & $V(t)$ & $A(t) - V(t)$\\
+                \hline
+                1 & 0.025 & 0.006 & 0.019\\
+                \hline
+                3 & 0.045 & 0.028 & 0.017\\
+                \hline
+                5 & 0.048 & 0.039 & 0.009\\
+                \hline
+                7 & 0.049 & 0.044 & 0.005\\
+                \hline
+                9 & 0.050 & 0.046 & 0.004\\
+                \hline
+            \end{tabular}
+          \end{table}
+          \begin{itemize}
+            \item[-] Dùng quy tắc điểm giữa trong tổng Riemann để tính vùng in đậm nằm giữa $A(t)$ và $V(t)$ trong khoảng thời gian đã cho
+            \item[-] Giả sử tổng lượng $N_2O$ hấp thụ bởi não bộ là$ Q_B(10)=60ml$, hãy tính lưu lượng máu não
+          \end{itemize}
 \end{enumerate}
 
 \newpage
