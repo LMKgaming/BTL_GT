@@ -11,14 +11,61 @@
 %\usepackage{pgfplots}
 \usepackage{indentfirst}
 \usepackage{graphicx}
+% Make border (Only copy from google)
+\usepackage{tikz}
+\usepackage{eso-pic}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathmorphing}
+%
 
 \renewcommand{\listtablename}{Danh sách Bảng biểu}
 \renewcommand{\listfigurename}{Danh sách Hình vẽ}
 
 \begin{document}
-\pagenumbering{roman}
+\pagenumbering{gobble}
+\newpage
+\begin{tikzpicture}[overlay,remember picture]
+	\draw [line width=2pt]
+		   ($ (current page.north west) + (1.5cm,-2.0cm) $)
+		rectangle
+		($ (current page.south east) + (-1.5cm,1.8cm) $);
+	\draw [line width=1pt]
+		($ (current page.north west) + (1.65cm,-2.15cm) $)
+		rectangle
+		($ (current page.south east) + (-1.65cm,1.95cm) $);
+	\end{tikzpicture}
+\begin{center}
+	\begin{large}
+		\textbf{ĐẠI HỌC QUỐC GIA TP. HỒ CHÍ MINH\\
+			TRƯỜNG ĐẠI HỌC BÁCH KHOA\\
+			KHOA KHOA HỌC ỨNG DỤNG}
+	\end{large}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\linewidth]{Images/01_logobachkhoa.png}
+	\end{figure}
+	\Large\textbf{}
+	\begin{large}
+		\textbf{BÁO CÁO BÀI TẬP LỚN GIẢI TÍCH 1}\\
+		\vspace{2.5cm}
+		\textbf{
+			TÌM HIỂU VỀ CEREBRAL BLOOD FLOW;\\
+			SURVIVAL AND RENEWAL; CARDIAC OUTPUT;\\
+			BLOOD FLOW TRONG BIOCACULUS-CACULUS\\
+			FOR LIFE AND SIENCE
+		}\\
+		\vspace{1.2cm}
+		\textbf{LỚP L28, NHÓM 9}\\
+		\vspace{1.2cm}
+		\hspace{0.25\linewidth}
+		\textbf{GVHD: Võ Trần An}\\
+		\hspace{0.25\linewidth}
+		\hspace{4.8cm}\textbf{Trần Thị Ngọc Huyền}
+	\end{large}
+\end{center}
 
 \newpage
+\pagenumbering{roman}
 \begin{center}
 	\textbf{\uppercase{Danh sách thành viên}}
 \end{center}
@@ -27,19 +74,19 @@
 	\def\arraystretch{2.5}
 	\begin{tabular}{|c|c|c|}
 		\hline
-		\textbf{Họ và tên} & \textbf{MSSV} & \textbf{Ghi chú \newline(Hoàn thành công việc)}\\
+		\textbf{Họ và tên}    & \textbf{MSSV} & \textbf{Ghi chú \newline(Hoàn thành công việc)} \\
 		\hline
-		Lê Minh Khoa & 2311593 & \\
+		Lê Minh Khoa          & 2311593       &                                                 \\
 		\hline
-		Nguyễn Cao Khuê & 2311716 & \\
+		Nguyễn Cao Khuê       & 2311716       &                                                 \\
 		\hline
-		Nguyễn Đức Trung Kiên & 2311734 & \\
+		Nguyễn Đức Trung Kiên & 2311734       &                                                 \\
 		\hline
-		Trần Nguyễn Anh Kiệt & 2311785 & \\
+		Trần Nguyễn Anh Kiệt  & 2311785       &                                                 \\
 		\hline
-		Trần Hoàng Lâm & 2311830 & \\
+		Trần Hoàng Lâm        & 2311830       &                                                 \\
 		\hline
-		Lê Đình Lân & 2311833 & \\
+		Lê Đình Lân           & 2311833       &                                                 \\
 		\hline
 	\end{tabular}
 \end{table}
@@ -89,7 +136,7 @@ Lời cuối, xin một lần nữa gửi lời cảm ơn sâu sắc đến cá 
 
 \newpage
 \begin{center}
-\tableofcontents
+	\tableofcontents
 \end{center}
 
 \newpage
@@ -124,12 +171,12 @@ Lời cuối, xin một lần nữa gửi lời cảm ơn sâu sắc đến cá 
 		      \begin{itemize}
 			      \item[-] 	Gọi $A(t)$ là nồng độ $N_2O$ trong động mạch được đo khi máu đi vào não và $V(t)$ là nồng độ $N_2O$ trong tĩnh mạch trong máu chảy ra từ não trong tĩnh mạch cổ
 			      \item[-] 	Biểu đồ thể hiện tương quan giữa $A(t)$ và $V(t)$ như sau:
-	 \begin{figure} [ht]
-             \centering
-             \includegraphics{Images/hình1.png}
-             \caption{}
-             \label{fig:enter-label}
-         \end{figure}
+			            \begin{figure} [ht]
+				            \centering
+				            \includegraphics{Images/hình1.png}
+				            \caption{}
+				            \label{fig:enter-label}
+			            \end{figure}
 		      \end{itemize}
 		      Kí hiệu lưu lượng máu là $F$ (đơn vị $mL$/phút). Xét trong $10$ phút đầu tiên
 		      kể từ khi hít, nếu chia khoảng $\left[0,10\right]$ thành các khoảng nhỏ hơn có độ dài bằng nhau $\Delta t$ thì
@@ -231,7 +278,7 @@ Lời cuối, xin một lần nữa gửi lời cảm ơn sâu sắc đến cá 
 		      Hỏi số ong trong tổ sau 1 tuần là khoảng bao nhiêu?
 	      \end{flushleft}
 	      \begin{center}
-            \textbf{\underline{Giải}}
+		      \textbf{\underline{Giải}}
 	      \end{center}
 	      \begin{flushleft}
 		      Ta có: $P_0=35000$, $T=7$(ngày)\\
@@ -256,12 +303,12 @@ Lời cuối, xin một lần nữa gửi lời cảm ơn sâu sắc đến cá 
 	      \begin{flushleft}
 		      Hình dạng mạch máu được mô tả bằng một ống hình trụ có chiều dài l và bán kính R như hình vẽ:\\
 		      % insert hinh ve 2
-	        \begin{figure} [ht]
-            \centering
-            \includegraphics{Images/Hình 2.jpg}
-            \caption{}
-            \label{fig:enter-label}
-        \end{figure}
+		      \begin{figure} [ht]
+			      \centering
+			      \includegraphics{Images/Hình 2.jpg}
+			      \caption{}
+			      \label{fig:enter-label}
+		      \end{figure}
 		      Vận tốc của dòng máu tại vị trí cách trục trung tâm của ống là r: $$V=\frac{P}{4\eta l}(R^2-r^2)$$ \\
 
 		      Trong đó : \begin{enumerate}
@@ -272,12 +319,12 @@ Lời cuối, xin một lần nữa gửi lời cảm ơn sâu sắc đến cá 
 		      Chia bán kính R thành các bán kính nhỏ hơn có độ dài như nhau là $\Delta R$, diện tích gần đúngcủa vòng có bán kính trong $r_{i-1}$ và bán kính ngoài $r_i$ (như hình vẽ) là: $2\pi r_i \Delta r$ với $\Delta r= r_i-r_{i-1}$\\
 		      Với $\Delta r$ rất bé thì vận tốc máu gần như không đổi gần bằng v(r).
 		      Thể tích máu chảy qua trong 1 đơn vị thời gian xấp xỉ là:
-	\begin{figure}[ht]
-            \centering
-            \includegraphics[scale=0.5]{Images/Hình-3.1.jpg}
-            \caption{}
-            \label{fig:enter-label}
-        \end{figure}
+		      \begin{figure}[ht]
+			      \centering
+			      \includegraphics[scale=0.5]{Images/Hình-3.1.jpg}
+			      \caption{}
+			      \label{fig:enter-label}
+		      \end{figure}
 		      $$(2\pi r, \Delta r)v(r_i)=2\pi r_iv(r_i)\Delta r$$
 		      %insert figure 2!!
 		      \\
@@ -285,13 +332,13 @@ Lời cuối, xin một lần nữa gửi lời cảm ơn sâu sắc đến cá 
 		      $$\sum_{i=1}^n2\pi r_iv(r_i)\Delta r$$
 		      \\
 		      Khi $n \to \infty $ , tổng thể tích máu đi qua mặt cắt của một mạch máu trong một đơn vị thời gian (Kí hiệu: $F$) là:
-              \begin{align*}
-                F&=\int_0^R 2\pi rv(r)dr\\
-                &=\int_0^R 2\pi r\frac{P}{4\eta l}(R^2-r^2)dr\\
-                &=\frac{\pi P}{2\eta l}\int_0^R (R^2r -r^3)dr\\
-                &=\frac{\pi P}{2\eta l}\left[R^2\frac{r^2}{2}-\frac{r^4}{4}\right]_{r=0}^{r=R}\\
-                &=\frac{\pi P}{2\eta l}\left[\frac{R^4}{2}-\frac{R^2}{4}\right]=\frac{\pi PR^4}{8\eta l}
-              \end{align*}
+		      \begin{align*}
+			      F & =\int_0^R 2\pi rv(r)dr                                                                  \\
+			        & =\int_0^R 2\pi r\frac{P}{4\eta l}(R^2-r^2)dr                                            \\
+			        & =\frac{\pi P}{2\eta l}\int_0^R (R^2r -r^3)dr                                            \\
+			        & =\frac{\pi P}{2\eta l}\left[R^2\frac{r^2}{2}-\frac{r^4}{4}\right]_{r=0}^{r=R}           \\
+			        & =\frac{\pi P}{2\eta l}\left[\frac{R^4}{2}-\frac{R^2}{4}\right]=\frac{\pi PR^4}{8\eta l}
+		      \end{align*}
 		      Biểu thức trên được gọi là định luật Poiseuille’s Law
 	      \end{flushleft}
 	\item \textbf{Ví dụ minh họa}
@@ -331,7 +378,7 @@ Lời cuối, xin một lần nữa gửi lời cảm ơn sâu sắc đến cá 
 		      Cardiac Output (Cung lượng tim) hay còn được gọi là
 		      tần số của dòng máu là lượng máu được tim bơm đi trong một đơn vị thời gian, thường là phút.
 	      \end{flushleft}
-        %   \vspace{2em}
+	      %   \vspace{2em}
 	\item \textbf{Phương pháp tính}
 	      \begin{flushleft}
 		      Để tính cung lượng tim, ta sẽ sử dụng phương pháp pha loãng thuốc nhuộm
@@ -379,22 +426,22 @@ Lời cuối, xin một lần nữa gửi lời cảm ơn sâu sắc đến cá 
 			      \end{tabular}
 		      \end{table}
 	      \end{flushleft}
-          \newpage
-          \begin{center}
-            \textbf{\underline{Giải}}
-          \end{center}
-          \begin{flushleft}
-            Qua đề bài ta xác định được $A=8mg$, $T=10$\\
-            \vspace{1em}
-            Áp dụng quy tắc trung điểm ta có $n=5$ và $\Delta t=2$
-            \begin{align*}
-                \int_{0}^{10} C(t)dt &\approx \left[C(1)+C(3)+C(5)+C(7)+C(9)\right].\Delta t\\
-                &=\left[0.6+5.9+8.2+4.8+1.6\right].2\\
-                &=42.2
-            \end{align*}
-            Ta dùng công thức tính cung lượng tim
-            $$F=\frac{A}{\displaystyle \int_{0}^{10} C(t)dt} \approx \frac{8}{42.2} \approx 0.19L/s=11.4L/min$$
-          \end{flushleft}
+	      \newpage
+	      \begin{center}
+		      \textbf{\underline{Giải}}
+	      \end{center}
+	      \begin{flushleft}
+		      Qua đề bài ta xác định được $A=8mg$, $T=10$\\
+		      \vspace{1em}
+		      Áp dụng quy tắc trung điểm ta có $n=5$ và $\Delta t=2$
+		      \begin{align*}
+			      \int_{0}^{10} C(t)dt & \approx \left[C(1)+C(3)+C(5)+C(7)+C(9)\right].\Delta t \\
+			                           & =\left[0.6+5.9+8.2+4.8+1.6\right].2                    \\
+			                           & =42.2
+		      \end{align*}
+		      Ta dùng công thức tính cung lượng tim
+		      $$F=\frac{A}{\displaystyle \int_{0}^{10} C(t)dt} \approx \frac{8}{42.2} \approx 0.19L/s=11.4L/min$$
+	      \end{flushleft}
 \end{enumerate}
 
 \newpage
